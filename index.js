@@ -4,6 +4,7 @@
  */
 
 var open = require('open-window');
+var load = require('load-script');
 
 /**
  * Expose `share`.
@@ -21,6 +22,10 @@ module.exports = share;
 function share(url) {
   var url = 'https://plus.google.com/share'
     + '?url=' + encodeURIComponent(url);
+
+  // load('https://apis.google.com/js/plusone.js');
+  // 16, 32, 64
+  // https://www.gstatic.com/images/icons/gplus-64.png
 
   return open(url);
 }
